@@ -3,6 +3,7 @@ package com.example.hellokotlin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.widget.Button
 import android.widget.TextView
 import java.util.*
 
@@ -15,6 +16,9 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         setContentView(R.layout.activity_main)
 
         textToSpeech = TextToSpeech(this,this)
+        findViewById<Button>(R.id.buttonPlay).setOnClickListener{
+            speak()
+        }
 
     }
 
