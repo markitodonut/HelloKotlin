@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         var message = findViewById<TextView>(R.id.etMessage).text.toString()
         if(message.isEmpty()) {
             findViewById<TextView>(R.id.tvServiceStatus).text = "Introduce un texto"
+            message = "Introduce un texto"
         }
         textToSpeech!!.speak(message,TextToSpeech.QUEUE_FLUSH,null,"")
     }
