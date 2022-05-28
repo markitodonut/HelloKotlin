@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     }
 
     private fun speak(){
-        var message = findViewById<TextView>(R.id.tvServiceStatus).text.toString()
+        var message = findViewById<TextView>(R.id.etMessage).text.toString()
         textToSpeech!!.speak(message,TextToSpeech.QUEUE_FLUSH,null,"")
     }
 
