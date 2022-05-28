@@ -35,4 +35,12 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
             findViewById<TextView>(R.id.tvServiceStatus).text = "No disponible"
         }
     }
+
+    override fun onDestroy() {
+        if (textToSpeech!=null) {
+            textToSpeech!!.stop()
+            textToSpeech!!.shutdown()
+        }
+        super.onDestroy()
+    }
 }
