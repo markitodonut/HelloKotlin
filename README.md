@@ -1,3 +1,3 @@
 #HelloKotlin
 
-Primera practica Kotlin
+Primera práctica Kotlin
