@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     override fun onInit(status: Int) {
         if(status == TextToSpeech.SUCCESS){
             findViewById<TextView>(R.id.tvServiceStatus).text = "Ready"
-            textToSpeech!!.setLanguage(Locale.US)
+            textToSpeech!!.setLanguage(Locale("ES"))
         }else{
             findViewById<TextView>(R.id.tvServiceStatus).text = "No disponible"
         }
